@@ -1,23 +1,28 @@
-# Analysing-Company-Stock
+# Netflix Stock Analysis: Beta Regression + Efficient Frontier (with Microsoft)
 
-This project analyzes a company's stock performance and creates an efficient frontier with Microsoft. The analysis covers a 156-week period ending on October 7, 2024.
+## Overview
+Analyzed Netflix stock risk/return vs. the market and constructed a two-asset efficient frontier with Microsoft.
+Data: 156-week period ending Oct 7, 2024.
 
-Features:
-  1. Historical stock price data collection and preparation
-  2. Regression analysis of company returns vs. Wilshire 5000 index
-  3. Calculation of company beta and expected returns
-  4. Efficient frontier analysis with Microsoft stock
-  5. Visualization of stock performance and efficient frontier
+## Business Questions
+- How sensitive is Netflix to overall market movements (beta)?
+- What risk/return tradeoff can an investor achieve by combining Netflix with Microsoft?
 
-Key Components:
-  1. Data Collection and Preparation
-  2. Company Analysis (Beta calculation, regression plotting)
-  3. Efficient Frontier Analysis
-  4. Visualization of results
+## Key Results
+- Beta (Netflix vs. Wilshire 5000): 1.62
+- Beta (Microsoft vs. Wilshire 5000): 1.09
+- Built an efficient frontier showing optimal risk-return allocations of Netflix + Microsoft.
 
-Tools Used:
-  1. Excel for data analysis and calculations
-  2. Yahoo Finance for historical stock data
-  3. LaTeX for documentation
+## Method (Excel-first)
+- Collected weekly adjusted close prices (Yahoo Finance) and computed weekly returns
+- Ran regression of stock returns vs. Wilshire 5000 returns to estimate beta
+- Estimated expected returns using: Risk-free rate (4.875%) + Beta × Equity risk premium (7.8%)
+- Computed portfolio return and volatility across weight allocations and plotted the efficient frontier
 
-This project was completed as part of corporate finance course assignment.
+## Artifacts
+- Report: `docs/Analysing_Company_Stock.pdf`
+- Excel model: `docs/Analysing_Company_Stock.xlsx`
+- Figures: `assets/regression_beta.png`, `assets/efficient_frontier.png`
+
+## Notes
+Completed as part of a Corporate Finance course assignment.
